@@ -1,83 +1,47 @@
 from random import *
+from setUp import *
+from racers import *
 import turtle
-turtle.colormode(255)
-turtle.Screen().bgcolor(135,206,250)
-# tom = racer(-200, 200, "red")
-tom = turtle.Turtle()
-tom.penup()
-tom.goto(-200, 200)
-tom.color("red")
-tom.shape("turtle")
+def move(racer): 
+    racer.forward(randint(1, 5))
 
-# tommy = racer(-200, 170, "orange")
-tommy = turtle.Turtle()
-tommy.penup()
-tommy.goto(-200, 170)
-tommy.color("orange")
-tommy.shape("turtle")
-# bob = racer(-200, 140, "yellow")
-bob = turtle.Turtle()
-bob.penup()
-bob.goto(-200, 140)
-bob.color("yellow")
-bob.shape("turtle")
-# bobby = racer(-200, 110, "green")
-bobby = turtle.Turtle()
-bobby.penup()
-bobby.goto(-200, 110)
-bobby.color("green")
-bobby.shape("turtle")
-# jim = racer(-200, 80, "blue")
-jim = turtle.Turtle()
-jim.penup()
-jim.goto(-200, 80)
-jim.color("blue")
-jim.shape("turtle")
-# jimmy = racer(-200, 50, "purple")
-jimmy = turtle.Turtle()
-jimmy.penup()
-jimmy.goto(-200, 50)
-jimmy.color("purple")
-jimmy.shape("turtle")
-
-tom.right(360)
-tommy.right(360)
-bob.right(360)
-bobby.right(360)
-jim.right(360)
-jimmy.right(360)
-
-pen = turtle.Turtle()
-pen.hideturtle()
-pen.penup()
-pen.goto(-180, 210)
-pen.pendown()
-pen.right(90)
-pen.forward(200)
-pen.penup()
-pen.goto(30, 210)
-pen.pendown()
-pen.forward(200)
-pen.penup()
-pen.goto(-210, 220)
-pen.pendown()
-pen.write("START")
-pen.penup()
-pen.goto(10, 220)
-pen.pendown()
-pen.write("FINSH")
+i = 0
+winningXcor = 10
+pen.goto(-80, -10)
+pen.color("white")
 for i in range(75):
-
-    tomSpeed = randint(1, 5)
-    tommySpeed = randint(1, 5)
-    bobSpeed = randint(1, 5)
-    bobbySpeed = randint(1, 5)
-    jimSpeed = randint(1, 5)
-    jimmySpeed = randint(1, 5)
-    tom.forward(tomSpeed)
-    tommy.forward(tommySpeed)
-    bob.forward(bobSpeed)
-    bobby.forward(bobbySpeed)
-    jim.forward(jimSpeed)
-    jimmy.forward(jimmySpeed)
+    i = 0
+    move(tom)
+    move(tommy)
+    move(bob)
+    move(bobby)
+    move(jim)
+    move(jimmy)
+    while(i < 1):
+        pen.pendown()
+        if tom.xcor() == winningXcor:
+            pen.write("THE RED TURTLE FINISHED!")
+            pen.ycor(-10)
+            break
+        elif tommy.xcor() == winningXcor:
+            pen.write("THE ORANGE TURTLE FINISHED!")
+            pen.ycor(-10)
+            break
+        elif bob.xcor() == winningXcor:
+            pen.write("THE YELLOW TURTLE FINISHED!")
+            pen.ycor(-10)
+            break
+        elif bobby.xcor() == winningXcor:
+            pen.write("THE GREEN TURTLE FINISHED!")
+            pen.ycor(-10)
+            break
+        elif jim.xcor() == winningXcor:
+            pen.write("THE BLUE TURTLE FINISHED!")
+            pen.ycor(-10)
+            break
+        elif jimmy.xcor() == winningXcor:
+            pen.write("THE PURPLE TURTLE FINISHED!")
+            pen.ycor(-10)
+            break
+        i+=1
 turtle.done()
