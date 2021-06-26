@@ -2,7 +2,6 @@ from random import *
 from setUp import *
 from racers import *
 from turtle import *
-print(True or False or False or False or False or False or False or False)
 i = 0
 turtle.hideturtle()
 winningXcor = 11
@@ -19,7 +18,6 @@ while(tom.xcor() != winningXcor and tommy.xcor() != winningXcor and bob.xcor() !
     move(bobby)
     move(jim)
     move(jimmy)
-    print(tom.xcor())
 tomx = tom.xcor() 
 tommyx = tommy.xcor()
 bobx = bob.xcor()
