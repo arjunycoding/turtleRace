@@ -1,15 +1,17 @@
 from random import *
 from setUp import *
 from racers import *
-import turtle
+from turtle import *
+print(True or False or False or False or False or False or False or False)
+i = 0
+turtle.hideturtle()
+winningXcor = 11
+penup()
+goto(-80, -20)
+color("white")
 def move(racer): 
     racer.forward(randint(1, 5))
-
-i = 0
-winningXcor = 10
-pen.goto(-80, -10)
-pen.color("white")
-for i in range(75):
+while(tom.xcor() != winningXcor and tommy.xcor() != winningXcor and bob.xcor() != winningXcor and bobby.xcor() != winningXcor and jim.xcor() != winningXcor and jimmy.xcor() != winningXcor):
     i = 0
     move(tom)
     move(tommy)
@@ -17,31 +19,24 @@ for i in range(75):
     move(bobby)
     move(jim)
     move(jimmy)
-    while(i < 1):
-        pen.pendown()
-        if tom.xcor() == winningXcor:
-            pen.write("THE RED TURTLE FINISHED!")
-            pen.ycor(-10)
-            break
-        elif tommy.xcor() == winningXcor:
-            pen.write("THE ORANGE TURTLE FINISHED!")
-            pen.ycor(-10)
-            break
-        elif bob.xcor() == winningXcor:
-            pen.write("THE YELLOW TURTLE FINISHED!")
-            pen.ycor(-10)
-            break
-        elif bobby.xcor() == winningXcor:
-            pen.write("THE GREEN TURTLE FINISHED!")
-            pen.ycor(-10)
-            break
-        elif jim.xcor() == winningXcor:
-            pen.write("THE BLUE TURTLE FINISHED!")
-            pen.ycor(-10)
-            break
-        elif jimmy.xcor() == winningXcor:
-            pen.write("THE PURPLE TURTLE FINISHED!")
-            pen.ycor(-10)
-            break
-        i+=1
+    print(tom.xcor())
+tomx = tom.xcor() 
+tommyx = tommy.xcor()
+bobx = bob.xcor()
+bobbyx = bobby.xcor()
+jimx = jim.xcor()
+jimmyx = jimmy.xcor()
+highest = max(tomx, tommyx, bobx, bobbyx, jimmyx)
+if highest == tomx:
+    write("Tom wins the Turtle Race",font=("Arial", 25, "normal"), align=("center"))
+elif highest == tommyx:
+    write("Tommy wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
+elif highest == bobx:
+    write("Bob wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
+elif highest == bobbyx:
+    write("Bobby wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
+elif highest == jimx:
+    write("Jim wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
+elif highest == jimmyx:
+    write("Jimmy wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
 turtle.done()
