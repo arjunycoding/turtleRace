@@ -1,9 +1,8 @@
 import turtle
-
-def clicked(racer):
-    def hurdle(x,y):
-        racer.forward(-100)
-    racer.onclick(hurdle)
+def moveForward(racer):
+    def forward(x,y):
+        racer.forward(5)
+    racer.onclick(forward)
 
 def makeRacer(cor, color):
     racer = turtle.Turtle()
@@ -11,8 +10,6 @@ def makeRacer(cor, color):
     racer.goto(cor[0], cor[1])
     racer.color(color)
     racer.shape("turtle")
-    
-    clicked(racer)
     return racer
 
 tom = makeRacer((-200,200), "red")

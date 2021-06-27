@@ -1,8 +1,11 @@
-from random import *
+from welcome import *
 from setUp import *
 from racers import *
+from whoWon import *
+from random import *
 from turtle import *
 i = 0
+print(True and False and False and False and False and False)
 turtle.hideturtle()
 winningXcor = 11
 penup()
@@ -11,6 +14,7 @@ color("white")
 def move(racer): 
     racer.forward(randint(1, 5))
 while(tom.xcor() != winningXcor and tommy.xcor() != winningXcor and bob.xcor() != winningXcor and bobby.xcor() != winningXcor and jim.xcor() != winningXcor and jimmy.xcor() != winningXcor):
+    moveForward(tom)
     i = 0
     move(tom)
     move(tommy)
@@ -18,23 +22,5 @@ while(tom.xcor() != winningXcor and tommy.xcor() != winningXcor and bob.xcor() !
     move(bobby)
     move(jim)
     move(jimmy)
-tomx = tom.xcor() 
-tommyx = tommy.xcor()
-bobx = bob.xcor()
-bobbyx = bobby.xcor()
-jimx = jim.xcor()
-jimmyx = jimmy.xcor()
-highest = max(tomx, tommyx, bobx, bobbyx, jimmyx)
-if highest == tomx:
-    write("Tom wins the Turtle Race",font=("Arial", 25, "normal"), align=("center"))
-elif highest == tommyx:
-    write("Tommy wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
-elif highest == bobx:
-    write("Bob wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
-elif highest == bobbyx:
-    write("Bobby wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
-elif highest == jimx:
-    write("Jim wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
-elif highest == jimmyx:
-    write("Jimmy wins the Turtle Race",  font=("Arial", 25, "normal"),  align=("center"))
+whoWon()
 turtle.done()
