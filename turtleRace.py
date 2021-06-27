@@ -5,7 +5,6 @@ from whoWon import *
 from random import *
 from turtle import *
 i = 0
-print(True and False and False and False and False and False)
 turtle.hideturtle()
 winningXcor = 11
 penup()
