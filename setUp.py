@@ -3,15 +3,18 @@ import turtle
 
 pen = turtle.Turtle()
 
+
 def goto(position):
     pen.penup()
     pen.goto(position[0], position[1])
 
-def drawTrack(): 
+
+def drawTrack():
     pen.pendown()
     pen.forward(200)
 
-def write(label): 
+
+def write(label):
     pen.pendown()
     pen.write(label)
 
@@ -24,7 +27,7 @@ start_label_cord = (start_cord[0]-30, start_cord[1]+10)
 finish_label_cord = (finish_cord[0]-30, finish_cord[1]+10)
 
 turtle.colormode(255)
-turtle.Screen().bgcolor(135,206,250)
+turtle.Screen().bgcolor(135, 206, 250)
 
 pen.hideturtle()
 goto(start_cord)

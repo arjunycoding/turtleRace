@@ -1,13 +1,14 @@
 from turtle import *
 from time import *
 colormode(255)
-bgcolor(135,206,250)
+bgcolor(135, 206, 250)
 hideturtle()
 penup()
 hideturtle()
 goto(0, 200)
 pendown()
-write("WELCOME TO THE TURTLE RACE GAME!", font=("Arial", 25, "normal"), align=("center"))
+write("WELCOME TO THE TURTLE RACE GAME!", font=(
+    "Arial", 25, "normal"), align=("center"))
 penup()
 goto(0, -200)
 write("""
